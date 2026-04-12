@@ -36,3 +36,5 @@ $ npm run test:cov
 
 - [Fix long import paths in your NestJS project](https://dev.to/tkssharma/fix-long-import-paths-in-your-nestjs-project-nestjs-5g10)
   - [6.0 Migration Guide #62508](https://github.com/microsoft/TypeScript/issues/62508)
+
+- [Prisma ORM in NestJS app](https://www.prisma.io/docs/guides/frameworks/nestjs)
