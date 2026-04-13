@@ -38,3 +38,7 @@ $ npm run test:cov
   - [6.0 Migration Guide #62508](https://github.com/microsoft/TypeScript/issues/62508)
 
 - [Prisma ORM in NestJS app](https://www.prisma.io/docs/guides/frameworks/nestjs)
+
+- [CORS in NestJS](https://docs.nestjs.com/security/cors)
+
+- [Rate Limiting in NestJS](https://docs.nestjs.com/security/rate-limiting)
