@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Ip,
   Param,
   ParseIntPipe,
   Patch,
@@ -14,6 +15,7 @@ import {
 import { UsersService } from '@/users/users.service';
 import { CreateUserDto } from '@/users/dto/create-user.dto';
 import { UpdateUserDto } from '@/users/dto/update-user.dto';
+import { CustomLoggerService } from '@/custom-logger/custom-logger.service';
 import { UserRole } from '@/common/enums/user-roles.enum';
 
 @Controller('users')
@@ -47,8 +49,12 @@ export class UsersController {
 
   constructor(private readonly usersService: UsersService) {}
 
+  private readonly logger = new CustomLoggerService(UsersController.name);
+
   @Get() // GET /users or /users?role=value
-  findAll(@Query('role') role?: UserRole) {
+  findAll(@Ip() ip: string, @Query('role') role?: UserRole) {
+    this.logger.log(`Request for ALL Users\t${ip}`, UsersController.name);
+
     return this.usersService.findAll(role);
   }
 

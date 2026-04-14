@@ -32,6 +32,28 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## API Endpoints
+
+The application exposes the following routes under the global prefix `api/v1`.
+
+### Users
+
+- `GET /api/v1/users`
+  - optional query: `?role=value` (value can be `INTERN`, `ENGINEER`, or `ADMIN`)
+- `GET /api/v1/users/:id`
+- `POST /api/v1/users`
+- `PATCH /api/v1/users/:id`
+- `DELETE /api/v1/users/:id`
+
+### Employees
+
+- `POST /api/v1/employees`
+- `GET /api/v1/employees`
+  - optional query: `?role=value` (value can be `INTERN`, `ENGINEER`, or `ADMIN`)
+- `GET /api/v1/employees/:id`
+- `PATCH /api/v1/employees/:id`
+- `DELETE /api/v1/employees/:id`
+
 ## Notes
 
 - [Fix long import paths in your NestJS project](https://dev.to/tkssharma/fix-long-import-paths-in-your-nestjs-project-nestjs-5g10)
