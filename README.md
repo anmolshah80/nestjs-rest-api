@@ -42,3 +42,5 @@ $ npm run test:cov
 - [CORS in NestJS](https://docs.nestjs.com/security/cors)
 
 - [Rate Limiting in NestJS](https://docs.nestjs.com/security/rate-limiting)
+
+- [Query Logging Extension (nestjs-prisma)](https://nestjs-prisma.dev/docs/query-logging-extension/)

@@ -7,6 +7,7 @@ import { AppService } from '@/app.service';
 import { UsersModule } from '@/users/users.module';
 import { DatabaseModule } from '@/database/database.module';
 import { EmployeesModule } from '@/employees/employees.module';
+import { CustomLoggerModule } from '@/custom-logger/custom-logger.module';
 
 @Module({
   imports: [
@@ -20,13 +21,14 @@ import { EmployeesModule } from '@/employees/employees.module';
         ttl: 1000,
         limit: 3,
       },
-      // limit to 100 api requests in 60 seconds
+      // limit to 10 api requests in 60 seconds
       {
         name: 'long',
         ttl: 60000,
-        limit: 100,
+        limit: 10,
       },
     ]),
+    CustomLoggerModule,
   ],
   controllers: [AppController],
   providers: [
